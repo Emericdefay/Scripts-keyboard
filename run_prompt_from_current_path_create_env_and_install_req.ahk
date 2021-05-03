@@ -17,9 +17,9 @@ cmdHere() {
 				Break
 			}
 	}
-	Run, %ComSpec%, % dir ? dir : A_Desktop
+	Run *runas %ComSpec%, % dir ? dir : A_Desktop
 	WinWaitActive, ahk_exe %comspec%
 	ControlSend,, python -m venv env{Enter}, ahk_exe %comspec%
-	ControlSend,, env\\Scripts\\activate.bat{Enter}, ahk_exe %comspec%
+	ControlSend,, "env/Scripts/activate.bat"{Enter}, ahk_exe %comspec%
 	ControlSend,, pip install -r requirements.txt{Enter}, ahk_exe %comspec%
 }

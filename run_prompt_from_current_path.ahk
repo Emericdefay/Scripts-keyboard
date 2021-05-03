@@ -17,5 +17,5 @@ cmdHere() {
 				Break
 			}
 	}
-	Run, cmd, % dir ? dir : A_Desktop
+	Run *RunAs cmd, % dir ? dir : A_Desktop
 }
