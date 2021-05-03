@@ -1,3 +1,4 @@
 - git bash + init
 - start env from current path
 - create a proper workflow 
+- git remote set-url origin to my ssh key
