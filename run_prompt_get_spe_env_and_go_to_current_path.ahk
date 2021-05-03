@@ -1,11 +1,5 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-;SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-
-; WinGetClass, Class, ahk_id %ID%
-; ControlGetText, ePath, Edit1, ahk_id %ID%
-
+﻿#NoEnv
+SendMode Input
 
 WinGet, current_ID, ID, A
 previous_ID := current_ID
@@ -14,6 +8,7 @@ global env := ""Chr(34)env_input
 Run, cmd.exe, %A_Desktop%
 WinWaitActive, ahk_exe %ComSpec%
 WinActivate, ahk_id %previous_ID%
+
 cmdHere()
  
 cmdHere() {
