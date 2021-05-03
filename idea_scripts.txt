@@ -1,0 +1,3 @@
+- git bash + init
+- start env from current path
+- create a proper workflow 
