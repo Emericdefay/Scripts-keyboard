@@ -24,14 +24,14 @@ if (current_pos_monitor_left = left_default_value_top)
 {
     RegWrite, REG_DWORD, HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Configuration\AUS24B1#ASNUrOZpntPd_27_07E0_4D+IVM560C11005M1A00939_29_07DB_AB+VSCBB3116843009_23_07E0_0F^270E278CAA0F044117752A8D9E892BD5\01, Position.cy, %right_default_value_bottom%
     RegWrite, REG_DWORD, HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Configuration\AUS24B1#ASNUrOZpntPd_27_07E0_4D+IVM560C11005M1A00939_29_07DB_AB+VSCBB3116843009_23_07E0_0F^270E278CAA0F044117752A8D9E892BD5\02, Position.cy, %left_default_value_bottom%
-    MsgBox,, Monitors Switch Pos => BOTTOM, Relaunch one screen to apply!
 }
 Else
 {
     RegWrite, REG_DWORD, HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Configuration\AUS24B1#ASNUrOZpntPd_27_07E0_4D+IVM560C11005M1A00939_29_07DB_AB+VSCBB3116843009_23_07E0_0F^270E278CAA0F044117752A8D9E892BD5\01, Position.cy, %right_default_value_top%
     RegWrite, REG_DWORD, HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Configuration\AUS24B1#ASNUrOZpntPd_27_07E0_4D+IVM560C11005M1A00939_29_07DB_AB+VSCBB3116843009_23_07E0_0F^270E278CAA0F044117752A8D9E892BD5\02, Position.cy, %left_default_value_top%
-    MsgBox,, Monitors Switch Pos => TOP, Relaunch one screen to apply!
 }
+
+DllCall("ChangeDisplaySettingsExA","ptr", IVM560C, "ptr", 0, "ptr", 0, "int", 0)
 
 int2hex(int)
 {
