@@ -9,14 +9,12 @@ DetectHiddenWindows, On
 ; Command for the Controlpad from Coolermaster
 ; attached to the "24" key of this controlpad.
 ; A key shortcut that redirect to the sub_manager
-
 ~#NumpadMult::
 {
     run, keys_manager_win.ahk,,HIDE, pid1
-    ;WinWait, ahk_pid %pid1%
     While, GetKeyState("Left") or GetKeyState("Down") or GetKeyState("Right") or GetKeyState("LWin")
     {
-        ControlFocus, , manager_win.ahk
+        ControlFocus,, manager_win.ahk
         Sleep, 10
     }
     Sleep, 1000

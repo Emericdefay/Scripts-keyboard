@@ -6,7 +6,6 @@ SetWorkingDir, %A_ScriptDir%
 ; Commands
 While, True
 {
-    ControlFocus,, manager_win.ahk
     if (GetKeyState("Left"))
     {
         run, keys_manager_set_0.ahk

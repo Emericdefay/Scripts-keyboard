@@ -1,6 +1,6 @@
 #SingleInstance, Force
-SendMode Input
 SetWorkingDir, %A_ScriptDir%
+
 
 ; TASKS 10 -> 19 :
 TASK10 := "TASKS/.ahk"
@@ -14,102 +14,132 @@ TASK17 := "TASKS/.ahk"
 TASK18 := "TASKS/.ahk"
 TASK19 := "TASKS/.ahk"
 
- & Numpad0::
-    try{
-        run, %A_WorkingDir%\%TASK10%
-        ExitApp
-    }
-    Catch, e
+
+; Commands :
+While, True
+{
+    if (GetKeyState("Numpad0"))
     {
-        ExitApp
+        try{
+            run, %A_WorkingDir%\%TASK10%
+            ExitApp
+            return
+        }
+        Catch, e
+        {
+            ExitApp
+        }
     }
 
-*Numpad1::
-    try{
-        run, %A_WorkingDir%\%TASK11%
-        ExitApp
-    }
-    Catch, e
+    if (GetKeyState("Numpad1"))
     {
-        ExitApp
+        try{
+            run, %A_WorkingDir%\%TASK11%
+            ExitApp
+            return
+        }
+        Catch, e
+        {
+            ExitApp
+        }
     }
 
-*Numpad2::
-    try{
-        run, %A_WorkingDir%\%TASK12%
-        ExitApp
-    }
-    Catch, e
+    if (GetKeyState("Numpad2"))
     {
-        ExitApp
+        try{
+            run, %A_WorkingDir%\%TASK12%
+            ExitApp
+            return
+        }
+        Catch, e
+        {
+            ExitApp
+        }
     }
 
-*Numpad3::
-    try{
-        run, %A_WorkingDir%\%TASK13%
-        ExitApp
-    }
-    Catch, e
+    if (GetKeyState("Numpad3"))
     {
-        ExitApp
+        try{
+            run, %A_WorkingDir%\%TASK13%
+            ExitApp
+        }
+        Catch, e
+        {
+            ExitApp
+        }
     }
 
-*Numpad4::
-    try{
-        run, %A_WorkingDir%\%TASK14%
-        ExitApp
-    }
-    Catch, e
+    if (GetKeyState("Numpad4"))
     {
-        ExitApp
+        try{
+            run, %A_WorkingDir%\%TASK14%
+            ExitApp
+        }
+        Catch, e
+        {
+            ExitApp
+        }
     }
 
-*Numpad5::
-    try{
-        run, %A_WorkingDir%\%TASK15%
-        ExitApp
-    }
-    Catch, e
+    if (GetKeyState("Numpad5"))
     {
-        ExitApp
+        try{
+            run, %A_WorkingDir%\%TASK15%
+            ExitApp
+        }
+        Catch, e
+        {
+            ExitApp
+        }
     }
 
-*Numpad6::
-    try{
-        run, %A_WorkingDir%\%TASK16%
-        ExitApp
-    }
-    Catch, e
+    if (GetKeyState("Numpad6"))
     {
-        ExitApp
+        try{
+            run, %A_WorkingDir%\%TASK16%
+            ExitApp
+        }
+        Catch, e
+        {
+            ExitApp
+        }
     }
 
-*Numpad7::
-    try{
-        run, %A_WorkingDir%\%TASK17%
-        ExitApp
-    }
-    Catch, e
+    if (GetKeyState("Numpad7"))
     {
-        ExitApp
+        try{
+            run, %A_WorkingDir%\%TASK17%
+            ExitApp
+        }
+        Catch, e
+        {
+            ExitApp
+        }
     }
 
-*Numpad8::
-    try{
-        run, %A_WorkingDir%\%TASK18%
-        ExitApp
-    }
-    Catch, e
+    if (GetKeyState("Numpad8"))
     {
-        ExitApp
+        try{
+            run, %A_WorkingDir%\%TASK18%
+            ExitApp
+        }
+        Catch, e
+        {
+            ExitApp
+        }
     }
 
-*Numpad9::
-    try{
-        run, %A_WorkingDir%\%TASK19%
-        ExitApp
-    }
-    Catch, e
+    if (GetKeyState("Numpad9"))
     {
-        ExitApp
+        try{
+            run, %A_WorkingDir%\%TASK19%
+            ExitApp
+        }
+        Catch, e
+        {
+            ExitApp
+        }
     }
+}
+
+ExitApp

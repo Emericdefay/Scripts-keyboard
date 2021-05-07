@@ -1,6 +1,6 @@
 #SingleInstance, Force
-SendMode Input
 SetWorkingDir, %A_ScriptDir%
+
 
 ; TASKS 1 -> 9 :
 TASK01 := "TASKS/toolbar_switch_hide-show.ahk"
@@ -13,7 +13,8 @@ TASK07 := "TASKS/run_prompt_from_current_path_create_env_and_install_req.ahk"
 TASK08 := "TASKS/run_prompt_get_dj_and_go_to_current_path.ahk"
 TASK09 := "TASKS/run_prompt_get_spe_env_and_go_to_current_path.ahk"
 
-ControlFocus,, manager_win.ahk
+
+; Commands :
 While, True
 {
     if (GetKeyState("Numpad1"))
@@ -126,3 +127,5 @@ While, True
         }
     }
 }
+
+ExitApp
