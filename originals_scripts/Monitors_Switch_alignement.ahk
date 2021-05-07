@@ -1,6 +1,7 @@
 ﻿#NoEnv 
 DetectHiddenWindows, On
 SetKeyDelay, 3
+SetWorkingDir %A_ScriptDir% 
 
 ; Parameters
 right_default_value_top := 0xFFFFFF3D                             ; My personnal right top screen pos
@@ -43,6 +44,7 @@ if (current_pos_monitor_left = left_default_value_top)
     DllCall("ChangeDisplaySettingsExA","ptr", IVM560C, "ptr", 0, "ptr", 0, "int", 0)
     WinWait, ahk_pid %pid1%
 	ControlSend,, %command_exit%{Enter}, ahk_pid %pid1%
+    run, "toolbar_switch_hide-show.ahk"
 }
 Else
 {
@@ -57,6 +59,7 @@ Else
     DllCall("ChangeDisplaySettingsExA","ptr", IVM560C, "ptr", 0, "ptr", 0, "int", 0)
     WinWait, ahk_pid %pid1%
 	ControlSend, , %command_exit%{Enter}, ahk_pid %pid1%
+    run, "toolbar_switch_hide-show.ahk"
 }
 
 ; function
